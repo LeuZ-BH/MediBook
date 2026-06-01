@@ -1,0 +1,48 @@
+:root{
+  --primary:#2563EB;
+  --accent:#0D9488;
+  --danger:#DC2626;
+}
+
+body{background:#f8fafc;}
+
+.topbar{background:#ffffff; border-bottom:1px solid rgba(0,0,0,0.06);}
+
+.app-shell{min-height:100vh; display:flex; flex-direction:column;}
+.main-area{flex:1;}
+
+.sidebar{
+  width:260px;
+  background:#ffffff;
+  border-right:1px solid rgba(0,0,0,0.06);
+  padding:16px 12px;
+}
+.sidebar .nav-link{color:#334155; border-radius:10px; padding:10px 12px; margin:4px 6px;}
+.sidebar .nav-link.active{background:rgba(37,99,235,0.10); color:var(--primary); font-weight:600;}
+
+.content{background:transparent;}
+
+.stat-card{
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:14px;
+  padding:16px;
+}
+.stat-label{font-size:13px; color:#64748b; margin-bottom:6px;}
+.stat-value{font-size:24px; font-weight:800; color:#0f172a;}
+
+.doctor-card{border-radius:14px; border:1px solid rgba(0,0,0,0.06);}
+
+/* Appointment Status badges */
+.badge-PENDING    { background: #FEF3C7; color: #92400E; }
+.badge-CONFIRMED  { background: #DBEAFE; color: #1E40AF; }
+.badge-COMPLETED  { background: #D1FAE5; color: #065F46; }
+.badge-CANCELLED  { background: #FEE2E2; color: #991B1B; }
+
+@media (max-width: 992px){
+  .sidebar{width:220px;}
+}
+@media (max-width: 768px){
+  .sidebar{display:none;}
+}
+

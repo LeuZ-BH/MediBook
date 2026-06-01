@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Appointments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link th:href="@{/static/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+<div class="app-shell">
+
+    <nav class="topbar navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" th:href="@{/doctor/dashboard}">MediBook</a>
+            <div class="ms-auto d-flex gap-2 align-items-center">
+                <span class="text-muted small" th:text="${session.userName}"></span>
+                <a class="btn btn-outline-danger btn-sm" th:href="@{/logout}">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-area d-flex">
+        <aside class="sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link"
+                    th:classappend="${activePage == 'dashboard'} ? ' active' : ''"
+                    th:href="@{/doctor/dashboard}">
+                    Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                    th:classappend="${activePage == 'slots'} ? ' active' : ''"
+                    th:href="@{/doctor/slots}">
+                    Manage Slots
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                    th:classappend="${activePage == 'appointments'} ? ' active' : ''"
+                    th:href="@{/doctor/appointments}">
+                    My Appointments
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content flex-grow-1 p-4">
+            <h3 class="mb-3">My Appointments</h3>
+            
+
+            <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+            <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
+
+            <div class="table-responsive">
+                
+                <table class="table table-hover bg-white shadow-sm" style="border-radius:10px; overflow:hidden;">
+                    <thead class="table-light">
+                    <tr>
+                        <th>Patient</th>
+                        <th>Specialization</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:if="${#lists.isEmpty(appointments)}">
+                        <td colspan="7"><div class="text-muted">No appointments found.</div></td>
+                    </tr>
+                   <tr th:each="a : ${appointments}">
+                        <td th:text="${a.patient.name}">PATIENT</td>
+                        <td th:text="${a.slot.doctor.specialization.name}">SPEC</td>
+                        <td th:text="${a.slot.slotDate}">DATE</td>
+                        <td th:text="${a.slot.startTime}">TIME</td>
+                        <td th:text="${a.reason}">REASON</td>
+                        <td><span th:text="${a.status}"></span></td>
+                        
+                        <td>
+                            
+                            <form th:if="${a.status == T(com.dabs.model.enums.AppointmentStatus).PENDING}"
+                                th:action="@{/doctor/appointments/confirm/{id}(id=${a.appointmentId})}"
+                                method="post">
+
+                                <button type="submit"
+                                        class="btn btn-primary btn-sm">
+                                    Confirm
+                                </button>
+
+                            </form>
+
+                            <form th:if="${a.status == T(com.dabs.model.enums.AppointmentStatus).PENDING}"
+                                th:action="@{/doctor/appointments/cancel/{id}(id=${a.appointmentId})}"
+                                method="post">
+
+                                <button type="submit"
+                                        class="btn btn-danger btn-sm mt-1">
+                                    Cancel
+                                </button>
+
+                            </form>
+
+                            <form th:if="${a.status == T(com.dabs.model.enums.AppointmentStatus).CONFIRMED}"
+                                th:action="@{/doctor/appointments/complete/{id}(id=${a.appointmentId})}"
+                                method="post">
+
+                                <button type="submit"
+                                        class="btn btn-success btn-sm">
+                                    Complete
+                                </button>
+
+                            </form>
+
+                            <form th:if="${a.status == T(com.dabs.model.enums.AppointmentStatus).CONFIRMED}"
+                                th:action="@{/doctor/appointments/cancel/{id}(id=${a.appointmentId})}"
+                                method="post">
+
+                                <button type="submit"
+                                        class="btn btn-danger btn-sm mt-1">
+                                    Cancel
+                                </button>
+
+                            </form>
+
+                            <span th:if="${a.status == T(com.dabs.model.enums.AppointmentStatus).COMPLETED}"
+                                class="badge bg-success">
+                                Completed
+                            </span>
+
+                            <span th:if="${a.status == T(com.dabs.model.enums.AppointmentStatus).CANCELLED}"
+                                class="badge bg-danger">
+                                Cancelled
+                            </span>
+                            
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
