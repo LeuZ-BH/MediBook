@@ -241,4 +241,22 @@ And one default admin user so you can log in and start managing the system immed
 Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
 
 -----
+## 📸 Application Screenshots
 
+### 🔐 Login & Registration
+![Login Register](./ScreenShots/Login%20Register.png)
+
+### 👨‍⚕️ Doctor Dashboard
+![Doctor Dashboard](./ScreenShots/Doc%20Dashboard.png)
+
+### 👤 Patient Dashboard
+![Patient Dashboard](./ScreenShots/Patient%20Dashboard.png)
+
+### 🔍 Search Doctors
+![Patient Search](./ScreenShots/Patient%20Search.png)
+
+### 📅 Appointment Management
+![Appointment](./ScreenShots/PatientAppointment.png)
+
+### 📋 Doctor Appointment History
+![Doctor History](./ScreenShots/Doctors's%20History.png)
