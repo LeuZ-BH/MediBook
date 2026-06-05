@@ -1,0 +1,19 @@
+<form th:action="@{/patient/notes/update}" method="post">
+
+    <input type="hidden"
+           name="noteId"
+           th:value="${note.noteId}">
+
+    <textarea
+            class="form-control"
+            rows="8"
+            name="noteText"
+            th:text="${note.noteText}">
+    </textarea>
+
+    <button type="submit"
+            class="btn btn-primary mt-3">
+        Update Note
+    </button>
+
+</form>

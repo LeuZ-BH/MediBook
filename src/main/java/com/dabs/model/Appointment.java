@@ -39,6 +39,18 @@ public class Appointment {
 
     private String reason;
 
+    @Column(name = "patient_age")
+    private Integer patientAge;
+
+    @Column(name = "patient_gender")
+    private String patientGender;
+
+    @Column(name = "blood_group")
+    private String bloodGroup;
+
+    @Column(name = "weight")
+    private Double weight;
+
     @Enumerated(EnumType.STRING)
     private AppointmentStatus status;
 
@@ -102,6 +114,38 @@ public class Appointment {
 
     public void setBookedAt(LocalDateTime bookedAt) {
         this.bookedAt = bookedAt;
+    }
+
+    public Integer getPatientAge() {
+        return patientAge;
+    }
+
+    public void setPatientAge(Integer patientAge) {
+        this.patientAge = patientAge;
+    }
+
+    public String getPatientGender() {
+        return patientGender;
+    }
+
+    public void setPatientGender(String patientGender) {
+        this.patientGender = patientGender;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
+    public Double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 }
 

@@ -11,5 +11,9 @@ public interface DoctorService {
     List<Doctor> searchDoctors(Integer specId, String name);
 
     List<Specialization> findAllSpecializations();
+
+    void update(Doctor doctor);
+
+    Doctor findById(int doctorId);
 }
 

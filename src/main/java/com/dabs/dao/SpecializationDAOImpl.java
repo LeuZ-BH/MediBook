@@ -6,17 +6,18 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
+import org.springframework.transaction.annotation.Transactional;
 import com.dabs.model.Specialization;
 
 @Repository
+@Transactional
 public class SpecializationDAOImpl implements SpecializationDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
 
     private Session session() {
-        return sessionFactory.getCurrentSession();
+        return sessionFactory.openSession();
     }
 
     @Override

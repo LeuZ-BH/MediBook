@@ -42,6 +42,7 @@ public class DoctorSlot {
     @Enumerated(EnumType.STRING)
     private SlotStatus status;
 
+
     public DoctorSlot() {
     }
 

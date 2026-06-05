@@ -24,6 +24,7 @@ import com.dabs.model.enums.AppointmentStatus;
 import com.dabs.model.enums.SlotStatus;
 
 @Service
+@Transactional
 public class AppointmentServiceImpl implements AppointmentService {
 
     @Autowired
@@ -65,6 +66,11 @@ public class AppointmentServiceImpl implements AppointmentService {
         return "SUCCESS";
     }
 
+
+    @Override
+    public Appointment findById(int id) {
+        return appointmentDAO.findById(id);
+    }
 
     @Override
     @Transactional
@@ -122,7 +128,7 @@ public class AppointmentServiceImpl implements AppointmentService {
 
     @Override
     @Transactional
-    public String bookAppointment(int patientId, int slotId, String reason) {
+    public String bookAppointment(int patientId,int slotId,String reason,Integer patientAge,String patientGender,String bloodGroup,Double weight) {
         DoctorSlot slot = slotDAO.findById(slotId);
         if (slot == null) {
             return "ERROR: Slot not found";
@@ -136,6 +142,12 @@ public class AppointmentServiceImpl implements AppointmentService {
         appt.setPatient(patient);
         appt.setSlot(slot);
         appt.setReason(reason);
+
+        appt.setPatientAge(patientAge);
+        appt.setPatientGender(patientGender);
+        appt.setBloodGroup(bloodGroup);
+        appt.setWeight(weight);
+
         appt.setStatus(AppointmentStatus.PENDING);
         appt.setBookedAt(LocalDateTime.now());
 
@@ -143,13 +155,15 @@ public class AppointmentServiceImpl implements AppointmentService {
         slotDAO.update(slot);
 
         try {
-            appointmentDAO.save(appt);
-        } catch (org.hibernate.exception.ConstraintViolationException ex) {
-            // Unique constraint on appointments.slot_id may fire under race
-            slot.setStatus(SlotStatus.AVAILABLE);
-            slotDAO.update(slot);
-            return "ERROR: Slot already booked";
-        }
+        
+        appointmentDAO.save(appt);
+
+        slot.setStatus(SlotStatus.PENDING);
+        slotDAO.update(slot);
+
+    } catch (org.hibernate.exception.ConstraintViolationException ex) {
+        return "ERROR: Slot already booked";
+    }
         return "SUCCESS";
     }
 
@@ -168,7 +182,7 @@ public class AppointmentServiceImpl implements AppointmentService {
         }
 
         appt.setStatus(AppointmentStatus.CANCELLED);
-        appt.getSlot().setStatus(SlotStatus.AVAILABLE);
+        appt.getSlot().setStatus(SlotStatus.CANCELLED);
         appointmentDAO.update(appt);
         return "SUCCESS";
     }

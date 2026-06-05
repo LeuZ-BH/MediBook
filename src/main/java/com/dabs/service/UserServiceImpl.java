@@ -5,6 +5,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
+import com.dabs.dao.DoctorDAO;
+import com.dabs.model.Doctor;
+import com.dabs.dao.SpecializationDAO;
+import com.dabs.model.Specialization;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +23,12 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDAO userDAO;
 
+    @Autowired
+    private DoctorDAO doctorDAO;
+
+    @Autowired
+    private SpecializationDAO specializationDAO;
+
     private String hash(String plain) {
         return com.dabs.util.PasswordUtil.hash(plain);
     }
@@ -27,13 +38,44 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void registerPatient(User user) {
         if (user.getPasswordHash() != null) {
-            // Expect caller to already hash, but keep safe.
-            // If it's already a hash, double-hashing would break login.
-            // So do not re-hash here.
+            
         }
         userDAO.save(user);
     }
 
+    @Override
+    @Transactional
+    public void registerDoctor(
+        User user, Integer specId,String qualification,Integer experienceYears,String bio,
+        String hospitalName,Double consultationFee,String addressLine,String city,String state,String country) {
+
+        userDAO.save(user);
+
+        Doctor doctor = new Doctor();
+
+        doctor.setUser(user);
+
+        doctor.setQualification(qualification);
+        doctor.setExperienceYears(experienceYears);
+        doctor.setBio(bio);
+        doctor.setHospitalName(hospitalName);
+        doctor.setConsultationFee(consultationFee);
+        doctor.setAddressLine(addressLine);
+        doctor.setCity(city);
+        doctor.setState(state);
+        doctor.setCountry(country);
+
+        Specialization specialization = null;
+
+        if(specId != null){
+            specialization = specializationDAO.findById(specId);
+        }
+
+        doctor.setSpecialization(specialization);
+        doctorDAO.save(doctor);
+    }
+
+   
     @Override
     @Transactional
     public User findById(int userId) {

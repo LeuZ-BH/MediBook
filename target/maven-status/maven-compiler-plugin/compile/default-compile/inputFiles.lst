@@ -9,6 +9,8 @@
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/AppointmentDAOImpl.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/DoctorDAO.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/DoctorDAOImpl.java
+/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/PatientNoteDAO.java
+/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/PatientNoteDAOImpl.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/SlotDAO.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/SlotDAOImpl.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/dao/SpecializationDAO.java
@@ -18,6 +20,7 @@
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/Appointment.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/Doctor.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/DoctorSlot.java
+/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/PatientNote.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/Specialization.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/User.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/model/enums/AppointmentStatus.java
@@ -27,6 +30,8 @@
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/AppointmentServiceImpl.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/DoctorService.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/DoctorServiceImpl.java
+/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/PatientNoteService.java
+/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/PatientNoteServiceImpl.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/UserService.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/service/UserServiceImpl.java
 /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/src/main/java/com/dabs/util/PasswordUtil.java

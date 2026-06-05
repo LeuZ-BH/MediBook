@@ -1,0 +1,59 @@
+2026-05-29T07:17:55.869Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-05-29T07:17:55.869Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "event": "securityTaskStarted",
+  "phase": "precheck",
+  "status": "succeeded",
+  "message": "Starting CVE remediation session",
+  "details": {
+    "scope": "cve"
+  },
+  "sessionId": "20260529071755"
+}}).
+2026-05-29T07:17:55.869Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T07:17:55.870Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'securityTaskStarted' reported!\nSession ID: 20260529071755,\nSession Dir: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/.github/modernize/java-upgrade/20260529071755"
+}}).
+2026-05-29T07:17:55.870Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-05-29T07:17:59.336Z [INFO] ---------------------prepare appmod-list-jdks----------------------
+2026-05-29T07:17:59.336Z [INFO] [Tool.prepareInvocation]({name: appmod-list-jdks, input: {
+  "sessionId": "",
+  "version": "17"
+}}).
+2026-05-29T07:17:59.336Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-05-29T07:17:59.337Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "List jdks"
+}}).
+2026-05-29T07:17:59.337Z [INFO] ----------------------prepared appmod-list-jdks----------------------
+2026-05-29T07:17:59.345Z [INFO] ----------------------invoke appmod-list-jdks----------------------
+2026-05-29T07:17:59.345Z [INFO] [Tool.invoke]({name: appmod-list-jdks, modelId: auto, input: {
+  "sessionId": "",
+  "version": "17",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai"
+}}).
+2026-05-29T07:17:59.345Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T07:17:59.363Z [INFO] [Tool.invoke]({result: {
+  "message": "No JDK installations found."
+}}).
+2026-05-29T07:17:59.363Z [INFO] ----------------------invoked appmod-list-jdks----------------------
+2026-05-29T07:17:59.366Z [INFO] ---------------------prepare appmod-list-mavens----------------------
+2026-05-29T07:17:59.366Z [INFO] [Tool.prepareInvocation]({name: appmod-list-mavens, input: {
+  "sessionId": "",
+  "includeVersion": true
+}}).
+2026-05-29T07:17:59.366Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-05-29T07:17:59.366Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "List mavens"
+}}).
+2026-05-29T07:17:59.366Z [INFO] ----------------------prepared appmod-list-mavens----------------------
+2026-05-29T07:17:59.370Z [INFO] ----------------------invoke appmod-list-mavens----------------------
+2026-05-29T07:17:59.370Z [INFO] [Tool.invoke]({name: appmod-list-mavens, modelId: auto, input: {
+  "sessionId": "",
+  "includeVersion": true,
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai"
+}}).
+2026-05-29T07:17:59.370Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T07:18:00.986Z [INFO] [Tool.invoke]({result: {
+  "message": "We found following maven installations in your system:\n\n1. Maven 4.0.0-rc-5\n   📁 Path: /Users/lakshya/Documents/apache-maven/apache-maven-4.0.0-rc-5/bin\n   🏷️ Source: M2_HOME,PATH\n\nTotal: 1 Maven installation(s) found"
+}}).
+2026-05-29T07:18:00.987Z [INFO] ----------------------invoked appmod-list-mavens----------------------

@@ -40,7 +40,15 @@ public class AppointmentDAOImpl implements AppointmentDAO {
     @Override
     public List<Appointment> findByDoctorId(int doctorId) {
         return session().createQuery(
-                "FROM Appointment a WHERE a.slot.doctor.doctorId = :did ORDER BY a.bookedAt DESC",
+                "FROM Appointment a WHERE a.slot.doctor.doctorId = :did " +
+                "ORDER BY " +
+                "CASE " +
+                "WHEN a.status = 'PENDING' THEN 1 " +
+                "WHEN a.status = 'CONFIRMED' THEN 2 " +
+                "WHEN a.status = 'COMPLETED' THEN 3 " +
+                "WHEN a.status = 'CANCELLED' THEN 4 " +
+                "ELSE 5 END, " +
+                "a.bookedAt DESC",
                 Appointment.class)
                 .setParameter("did", doctorId)
                 .getResultList();

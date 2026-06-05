@@ -10,9 +10,13 @@ com/dabs/service/AppointmentServiceImpl.class
 com/dabs/service/UserServiceImpl.class
 com/dabs/model/enums/SlotStatus.class
 com/dabs/dao/AppointmentDAO.class
+com/dabs/model/PatientNote.class
 com/dabs/model/Appointment.class
+com/dabs/dao/PatientNoteDAOImpl.class
 com/dabs/dao/SlotDAOImpl.class
 com/dabs/model/DoctorSlot.class
+com/dabs/service/PatientNoteServiceImpl.class
+com/dabs/service/PatientNoteService.class
 com/dabs/dao/DoctorDAOImpl.class
 com/dabs/dao/SpecializationDAOImpl.class
 com/dabs/dao/DoctorDAO.class
@@ -25,6 +29,7 @@ com/dabs/config/HibernateConfig.class
 com/dabs/dao/AppointmentDAOImpl.class
 com/dabs/service/UserService.class
 com/dabs/util/PasswordUtil.class
+com/dabs/dao/PatientNoteDAO.class
 com/dabs/dao/SlotDAO.class
 com/dabs/controller/AdminController.class
 com/dabs/model/Specialization.class

@@ -21,8 +21,8 @@ public class HibernateConfig {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         ds.setUrl("jdbc:mysql://localhost:3306/appointment_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
-        ds.setUsername("root");      // developer should change this
-        ds.setPassword("12345678");  // developer should change this
+        ds.setUsername("root");
+        ds.setPassword("12345678");
         return ds;
     }
 

@@ -31,10 +31,28 @@ public class DoctorDAOImpl implements DoctorDAO {
 
     @Override
     public Doctor findByUserId(int userId) {
-        return session()
-                .createQuery("FROM Doctor d WHERE d.user.userId = :uid", Doctor.class)
+
+        System.out.println("DAO RECEIVED USER ID = " + userId);
+
+        Doctor d = session()
+                .createQuery(
+                    "FROM Doctor d WHERE d.user.userId = :uid",
+                    Doctor.class)
                 .setParameter("uid", userId)
                 .uniqueResult();
+
+        System.out.println("DAO RESULT = " + d);
+
+        if(d != null){
+            System.out.println("DAO DOCTOR ID = " + d.getDoctorId());
+
+            if(d.getUser() != null){
+                System.out.println("DAO USER ID = " + d.getUser().getUserId());
+                System.out.println("DAO USER NAME = " + d.getUser().getName());
+            }
+        }
+
+        return d;
     }
 
     @Override

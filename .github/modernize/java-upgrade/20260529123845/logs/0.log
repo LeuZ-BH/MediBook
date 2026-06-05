@@ -1,0 +1,715 @@
+2026-05-29T12:38:45.990Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-05-29T12:38:45.991Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "event": "securityTaskStarted",
+  "status": "succeeded",
+  "phase": "precheck",
+  "details": {
+    "scope": "cve"
+  },
+  "message": "Start CVE scan precheck",
+  "sessionId": "20260529123845"
+}}).
+2026-05-29T12:38:45.991Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T12:38:45.991Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'securityTaskStarted' reported!\nSession ID: 20260529123845,\nSession Dir: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/.github/modernize/java-upgrade/20260529123845"
+}}).
+2026-05-29T12:38:45.991Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-05-29T12:39:01.020Z [INFO] ---------------------prepare appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:01.020Z [INFO] [Tool.prepareInvocation]({name: appmod-validate-cves-for-java, input: {
+  "sessionId": "20260529123845",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "dependencies": [
+    "mysql:mysql-connector-java:8.0.33",
+    "javax.servlet:javax.servlet-api:4.0.1",
+    "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+    "org.apache.commons:commons-dbcp2:2.9.0"
+  ],
+  "__name__": "appmod-validate-cves-for-java"
+}}).
+2026-05-29T12:39:01.021Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-05-29T12:39:01.021Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Validate CVEs"
+}}).
+2026-05-29T12:39:01.021Z [INFO] ----------------------prepared appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:01.029Z [INFO] ----------------------invoke appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:01.029Z [INFO] [Tool.invoke]({name: appmod-validate-cves-for-java, modelId: auto, input: {
+  "sessionId": "20260529123845",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "dependencies": [
+    "mysql:mysql-connector-java:8.0.33",
+    "javax.servlet:javax.servlet-api:4.0.1",
+    "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+    "org.apache.commons:commons-dbcp2:2.9.0"
+  ],
+  "__name__": "appmod-validate-cves-for-java"
+}}).
+2026-05-29T12:39:01.029Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T12:39:01.030Z [INFO] Project /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system is a maven project, try to get java version from pom.xml
+2026-05-29T12:39:01.030Z [INFO] Getting CVEs for dependencies: mysql:mysql-connector-java:8.0.33,javax.servlet:javax.servlet-api:4.0.1,org.hibernate.validator:hibernate-validator:6.2.5.Final,org.apache.commons:commons-dbcp2:2.9.0
+2026-05-29T12:39:01.030Z [INFO] getting CVEs for dependencies:
+ - mysql:mysql-connector-java:8.0.33
+  - javax.servlet:javax.servlet-api:4.0.1
+  - org.hibernate.validator:hibernate-validator:6.2.5.Final
+  - org.apache.commons:commons-dbcp2:2.9.0...
+2026-05-29T12:39:01.030Z [INFO] getting gitHub access token...
+2026-05-29T12:39:01.031Z [INFO] Project java version: 17
+2026-05-29T12:39:01.031Z [INFO] Maven project detected.
+2026-05-29T12:39:01.031Z [INFO] Build tool type: mvn
+2026-05-29T12:39:01.048Z [INFO] JDK: {
+  "name": "java",
+  "path": "/opt/homebrew/Cellar/openjdk@17/17.0.19/libexec/openjdk.jdk/Contents/Home/bin",
+  "version": "17"
+}
+2026-05-29T12:39:01.049Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "/Users/lakshya/Documents/apache-maven/apache-maven-4.0.0-rc-5/bin",
+  "version": "",
+  "source": "M2_HOME,PATH"
+}
+2026-05-29T12:39:01.049Z [INFO] Project config: {
+  "buildTool": {
+    "path": "/Users/lakshya/Documents/apache-maven/apache-maven-4.0.0-rc-5/bin",
+    "name": "mvn",
+    "version": "",
+    "source": "M2_HOME,PATH"
+  },
+  "jdk": {
+    "path": "/opt/homebrew/Cellar/openjdk@17/17.0.19/libexec/openjdk.jdk/Contents/Home/bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "doctor-appointment-system",
+  "dir": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system"
+}
+2026-05-29T12:39:01.050Z [INFO] [Environment] Running command (Java undefined): mvn dependency:tree -B
+[WARNING] Unable to find the root directory. Create a .mvn directory in the root directory or add the root="true" attribute on the root project's model to identify it.
+[INFO] Scanning for projects...
+[INFO] Loaded 22873 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/maven-metadata.xml (1.4 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.11.0/maven-dependency-plugin-3.11.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.11.0/maven-dependency-plugin-3.11.0.pom (19 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/48/maven-plugins-48.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/48/maven-plugins-48.pom (7.2 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/48/maven-parent-48.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/48/maven-parent-48.pom (50 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/38/apache-38.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/38/apache-38.pom (26 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.4/junit-bom-5.14.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.4/junit-bom-5.14.4.pom (5.7 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.11.0/maven-dependency-plugin-3.11.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.11.0/maven-dependency-plugin-3.11.0.jar (262 kB at 9223372037 GB/s)
+[INFO] 
+[INFO] -----------------< com.dabs:doctor-appointment-system >-----------------
+[INFO] Building doctor-appointment-system 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots-c1d4c55f9308e5ac18a4069bed41dca64d85c515.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to jvnet-nexus-releases-a5d540dd75d8efce5a7e6a5ccab82bab11416135 (https://maven.java.net/content/repositories/releases/): (certificate_expired) PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- dependency:3.11.0:tree (default-cli) @ doctor-appointment-system ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-maven/1.5.1/domtrip-maven-1.5.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-core/1.5.1/domtrip-core-1.5.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.1.0/doxia-sink-api-2.1.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/4.0.0/maven-reporting-api-4.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/4.0.0/maven-reporting-api-4.0.0.pom (2.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/43/maven-shared-components-43.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.1.0/doxia-sink-api-2.1.0.pom (1.3 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.pom (8.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.1.0/doxia-2.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-maven/1.5.1/domtrip-maven-1.5.1.pom (3.7 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip/1.5.1/domtrip-1.5.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-core/1.5.1/domtrip-core-1.5.1.pom (4.7 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/43/maven-shared-components-43.pom (3.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.2/junit-bom-5.11.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.11.0/plexus-archiver-4.11.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.1.0/doxia-2.1.0.pom (13 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip/1.5.1/domtrip-1.5.1.pom (1.6 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/parent/parent/52/parent-52.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.2/junit-bom-5.11.2.pom (5.6 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.11.0/plexus-archiver-4.11.0.pom (5.6 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/25/plexus-25.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom (33 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/92/commons-parent-92.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/parent/parent/52/parent-52.pom (26 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.6.0/plexus-io-3.6.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.1.0/plexus-i18n-1.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.pom (6.8 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/25/plexus-25.pom (31 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.1/junit-bom-5.14.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/92/commons-parent-92.pom (80 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.17.1/maven-dependency-analyzer-1.17.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.1.0/plexus-i18n-1.1.0.pom (2.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.6.0/plexus-io-3.6.0.pom (3.5 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.1/junit-bom-5.14.1.pom (5.7 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.9.25/maven-resolver-util-1.9.25.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.17.1/maven-dependency-analyzer-1.17.1.pom (7.1 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/48/maven-shared-components-48.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.pom (7.0 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.pom (11 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.9.25/maven-resolver-util-1.9.25.pom (2.2 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.pom (2.6 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver/1.9.25/maven-resolver-1.9.25.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-parent/3.1/velocity-tools-parent-3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/48/maven-shared-components-48.pom (3.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.pom (1.4 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.0.0/doxia-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.pom (5.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/2.0.0/doxia-sitetools-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-parent/3.1/velocity-tools-parent-3.1.pom (8.0 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.pom (3.9 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver/1.9.25/maven-resolver-1.9.25.pom (25 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/4/velocity-master-4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.0.0/doxia-2.0.0.pom (17 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/2.0.0/doxia-sitetools-2.0.0.pom (12 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/4/velocity-master-4.pom (7.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.pom (7.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom (5.6 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/1.0.0/org.eclipse.sisu.plexus-1.0.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.21.0/commons-io-2.21.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.pom (7.4 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.11/xz-1.11.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.pom (2.9 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/2.0.0/doxia-modules-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.pom (5.4 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/1.0.0/org.eclipse.sisu.plexus-1.0.0.pom (17 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.21.0/commons-io-2.21.0.pom (21 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-inject/1.0.0/sisu-inject-1.0.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/91/commons-parent-91.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.11/xz-1.11.pom (1.9 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.7-6/zstd-jni-1.5.7-6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/2.0.0/doxia-modules-2.0.0.pom (2.5 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.10/asm-9.10.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.0/maven-common-artifact-filters-3.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-inject/1.0.0/sisu-inject-1.0.0.pom (28 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.7-6/zstd-jni-1.5.7-6.pom (2.0 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-api/1.9.25/maven-resolver-api-1.9.25.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/91/commons-parent-91.pom (79 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.10/asm-9.10.pom (2.4 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.0/maven-common-artifact-filters-3.1.0.pom (5.3 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-api/1.9.25/maven-resolver-api-1.9.25.pom (2.2 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom (31 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/73/commons-parent-73.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.pom (10 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.3/velocity-engine-parent-2.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.pom (18 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom (18 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.pom (31 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/50/commons-parent-50.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.3/velocity-engine-parent-2.3.pom (14 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom (42 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/73/commons-parent-73.pom (78 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom (3.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.pom (7.5 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.pom (20 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/50/commons-parent-50.pom (76 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom (14 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom (20 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.pom (3.0 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/1.0.0/org.eclipse.sisu.inject-1.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.pom (12 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.pom (2.9 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.4/velocity-engine-parent-2.4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.2.0/plexus-component-annotations-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.pom (4.1 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/19/plexus-19.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom (78 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.9.0/plexus-classworlds-2.9.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.2.0/plexus-component-annotations-2.2.0.pom (736 B at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.2.0/plexus-containers-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/19/plexus-19.pom (25 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.4/velocity-engine-parent-2.4.pom (9.5 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/1.0.0/org.eclipse.sisu.inject-1.0.0.pom (18 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.9.0/plexus-classworlds-2.9.0.pom (7.1 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom (32 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom (18 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.2.0/plexus-containers-2.2.0.pom (2.3 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.pom (11 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/14/commons-parent-14.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom (16 kB at 9223372037 GB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/14/commons-parent-14.pom (31 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-maven/1.5.1/domtrip-maven-1.5.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-maven/1.5.1/domtrip-maven-1.5.1.jar (75 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-core/1.5.1/domtrip-core-1.5.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.1.0/doxia-sink-api-2.1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/4.0.0/maven-reporting-api-4.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.11.0/plexus-archiver-4.11.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/maveniverse/maven/domtrip/domtrip-core/1.5.1/domtrip-core-1.5.1.jar (153 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/4.0.0/maven-reporting-api-4.0.0.jar (9.8 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.jar (21 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.6.0/plexus-io-3.6.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.1.0/doxia-sink-api-2.1.0.jar (12 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.1.0/plexus-i18n-1.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.1.0/plexus-i18n-1.1.0.jar (10 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.17.1/maven-dependency-analyzer-1.17.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.11.0/plexus-archiver-4.11.0.jar (227 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.6.0/plexus-io-3.6.0.jar (80 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar (714 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.9.25/maven-resolver-util-1.9.25.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.jar (159 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar (193 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.17.1/maven-dependency-analyzer-1.17.1.jar (55 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.jar (43 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.jar (50 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.jar (86 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.9.25/maven-resolver-util-1.9.25.jar (197 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.jar (44 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/1.0.0/org.eclipse.sisu.plexus-1.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.jar (217 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.jar (54 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.11/xz-1.11.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.jar (168 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.7-6/zstd-jni-1.5.7-6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.jar (35 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.10/asm-9.10.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/1.0.0/org.eclipse.sisu.plexus-1.0.0.jar (216 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.11/xz-1.11.jar (169 kB at 9223372037 GB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.10/asm-9.10.jar (126 kB at 126 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar (247 kB at 247 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.jar (35 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar (585 kB at 585 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.jar (242 kB at 242 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.jar (251 kB at 251 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/1.0.0/org.eclipse.sisu.inject-1.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.jar (16 kB at 16 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.9.0/plexus-classworlds-2.9.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.jar (17 kB at 17 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.jar (5.7 kB at 5.7 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.9.0/plexus-classworlds-2.9.0.jar (54 kB at 54 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/1.0.0/org.eclipse.sisu.inject-1.0.0.jar (304 kB at 304 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.7-6/zstd-jni-1.5.7-6.jar (7.4 MB at 2.5 MB/s)
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] com.dabs:doctor-appointment-system:war:1.0
+[INFO] +- org.springframework:spring-webmvc:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-aop:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-beans:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-context:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.27:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-expression:jar:5.3.27:compile
+[INFO] |  \- org.springframework:spring-web:jar:5.3.27:compile
+[INFO] +- org.springframework:spring-orm:jar:5.3.27:compile
+[INFO] |  \- org.springframework:spring-jdbc:jar:5.3.27:compile
+[INFO] +- org.springframework:spring-tx:jar:5.3.27:compile
+[INFO] +- org.hibernate:hibernate-core:jar:5.6.15.Final:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile
+[INFO] |  +- javax.persistence:javax.persistence-api:jar:2.2:compile
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.12.18:compile
+[INFO] |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.1.1.Final:compile
+[INFO] |  +- org.jboss:jandex:jar:2.4.2.Final:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  +- javax.activation:javax.activation-api:jar:1.2.0:compile
+[INFO] |  +- org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile
+[INFO] |  +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[INFO] |  \- org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile
+[INFO] |     +- org.glassfish.jaxb:txw2:jar:2.3.1:compile
+[INFO] |     +- com.sun.istack:istack-commons-runtime:jar:3.0.7:compile
+[INFO] |     +- org.jvnet.staxex:stax-ex:jar:1.8:compile
+[INFO] |     \- com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:compile
+[INFO] +- com.mysql:mysql-connector-j:jar:8.0.33:compile
+[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.21.9:compile
+[INFO] +- org.thymeleaf:thymeleaf-spring5:jar:3.1.1.RELEASE:compile
+[INFO] |  +- org.thymeleaf:thymeleaf:jar:3.1.1.RELEASE:compile
+[INFO] |  |  +- org.attoparser:attoparser:jar:2.0.6.RELEASE:compile
+[INFO] |  |  \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:2.0.5:compile
+[INFO] +- javax.servlet:javax.servlet-api:jar:4.0.1:provided
+[INFO] +- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
+[INFO] |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] \- org.apache.commons:commons-dbcp2:jar:2.9.0:compile
+[INFO]    +- org.apache.commons:commons-pool2:jar:2.10.0:compile
+[INFO]    \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.904 s
+[INFO] Finished at: 2026-05-29T18:09:10+05:30
+[INFO] ------------------------------------------------------------------------
+2026-05-29T12:39:11.306Z [INFO] [MavenBuildTool] Successfully got dependency tree of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:11.307Z [INFO] [MavenBuildTool] Getting Java version of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system from pom.xml
+2026-05-29T12:39:11.307Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:11.307Z [INFO] [MavenBuildTool] Getting all module coordinates of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:11.308Z [INFO] [MavenBuildTool] Getting effective POMs of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:11.308Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-96356144-7209-4d1e-b03f-2570562b2298.log
+[WARNING] Unable to find the root directory. Create a .mvn directory in the root directory or add the root="true" attribute on the root project's model to identify it.
+[INFO] Scanning for projects...
+[INFO] Loaded 22873 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/maven-metadata.xml
+Progress (1): 807 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/maven-metadata.xml (807 B at 4.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.1/maven-help-plugin-3.5.1.pom
+Progress (1): 0.9/10 kBProgress (1): 2.3/10 kBProgress (1): 3.2/10 kBProgress (1): 4.6/10 kBProgress (1): 5.9/10 kBProgress (1): 7.3/10 kBProgress (1): 8.7/10 kBProgress (1): 10/10 kB Progress (1): 10 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.1/maven-help-plugin-3.5.1.pom (10 kB at 50.0 kB/s)
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots-c1d4c55f9308e5ac18a4069bed41dca64d85c515.txt)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.1/maven-help-plugin-3.5.1.jar
+Progress (1): 0.9/65 kBProgress (1): 2.3/65 kBProgress (1): 3.6/65 kBProgress (1): 5.0/65 kBProgress (1): 6.4/65 kBProgress (1): 7.7/65 kBProgress (1): 9.1/65 kBProgress (1): 10/65 kB Progress (1): 12/65 kBProgress (1): 12/65 kBProgress (1): 14/65 kBProgress (1): 15/65 kBProgress (1): 16/65 kBProgress (1): 18/65 kBProgress (1): 19/65 kBProgress (1): 21/65 kBProgress (1): 22/65 kBProgress (1): 23/65 kBProgress (1): 25/65 kBProgress (1): 26/65 kBProgress (1): 27/65 kBProgress (1): 29/65 kBProgress (1): 30/65 kBProgress (1): 31/65 kBProgress (1): 33/65 kBProgress (1): 34/65 kBProgress (1): 36/65 kBProgress (1): 37/65 kBProgress (1): 38/65 kBProgress (1): 40/65 kBProgress (1): 41/65 kBProgress (1): 42/65 kBProgress (1): 44/65 kBProgress (1): 45/65 kBProgress (1): 47/65 kBProgress (1): 48/65 kBProgress (1): 49/65 kBProgress (1): 51/65 kBProgress (1): 52/65 kBProgress (1): 53/65 kBProgress (1): 55/65 kBProgress (1): 59/65 kBProgress (1): 63/65 kBProgress (1): 65 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.1/maven-help-plugin-3.5.1.jar (65 kB at 470.4 kB/s)
+[INFO] 
+[INFO] -----------------< com.dabs:doctor-appointment-system >-----------------
+[INFO] Building doctor-appointment-system 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ doctor-appointment-system ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.13.1/maven-plugin-tools-generators-3.13.1.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.3/plexus-interactivity-api-1.3.pom
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.pom
+Progress (1): 0.9/4.1 kBProgress (1): 2.3/4.1 kBProgress (1): 3.6/4.1 kBProgress (1): 4.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.13.1/maven-plugin-tools-generators-3.13.1.pom (4.1 kB at 32.8 kB/s)
+Progress (1): 0.9/1.7 kBProgress (1): 1.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.3/plexus-interactivity-api-1.3.pom (1.7 kB at 13.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.13.1/maven-plugin-tools-3.13.1.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity/1.3/plexus-interactivity-1.3.pom
+Progress (1): 0.9/25 kBProgress (1): 2.3/25 kBProgress (1): 3.6/25 kBProgress (1): 5.0/25 kBProgress (1): 6.4/25 kBProgress (1): 7.8/25 kBProgress (1): 9.1/25 kBProgress (1): 10/25 kB Progress (1): 12/25 kBProgress (1): 13/25 kBProgress (1): 15/25 kBProgress (1): 16/25 kBProgress (1): 17/25 kBProgress (1): 19/25 kBProgress (1): 20/25 kBProgress (1): 21/25 kBProgress (1): 23/25 kBProgress (1): 24/25 kBProgress (1): 25 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.pom (25 kB at 172.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.20/xstream-parent-1.4.20.pom
+Progress (1): 0.9/1.9 kBProgress (1): 1.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity/1.3/plexus-interactivity-1.3.pom (1.9 kB at 9.4 kB/s)
+Progress (1): 0.9/44 kBProgress (1): 2.3/44 kBProgress (1): 3.6/44 kBProgress (1): 5.0/44 kBProgress (1): 6.4/44 kBProgress (1): 7.8/44 kBProgress (1): 9.1/44 kBProgress (1): 10/44 kB Progress (1): 12/44 kBProgress (1): 13/44 kBProgress (1): 15/44 kBProgress (1): 16/44 kBProgress (1): 17/44 kBProgress (1): 19/44 kBProgress (1): 20/44 kBProgress (2): 20/44 kB | 0.9/18 kBProgress (2): 20/44 kB | 2.3/18 kBProgress (2): 20/44 kB | 3.6/18 kBProgress (2): 20/44 kB | 5.0/18 kBProgress (2): 20/44 kB | 6.4/18 kBProgress (2): 20/44 kB | 7.8/18 kBProgress (2): 20/44 kB | 9.1/18 kBProgress (2): 20/44 kB | 10/18 kB Progress (2): 20/44 kB | 12/18 kBProgress (2): 21/44 kB | 12/18 kBProgress (2): 21/44 kB | 13/18 kBProgress (2): 23/44 kB | 13/18 kBProgress (2): 23/44 kB | 15/18 kBProgress (2): 23/44 kB | 16/18 kBProgress (2): 24/44 kB | 16/18 kBProgress (2): 26/44 kB | 16/18 kBProgress (2): 26/44 kB | 17/18 kBProgress (2): 27/44 kB | 17/18 kBProgress (2): 27/44 kB | 18 kB   Progress (2): 28/44 kB | 18 kB                              Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.13.1/maven-plugin-tools-3.13.1.pom (18 kB at 84.7 kB/s)
+Progress (1): 30/44 kBProgress (1): 31/44 kBProgress (1): 32/44 kBProgress (1): 33/44 kBProgress (1): 35/44 kBProgress (1): 36/44 kBProgress (1): 37/44 kBProgress (1): 39/44 kBProgress (1): 40/44 kBProgress (1): 41/44 kBProgress (1): 43/44 kBProgress (1): 44 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.20/xstream-parent-1.4.20.pom (44 kB at 229.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.17.2/jsoup-1.17.2.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.pom
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.pom
+Progress (1): 0.9/24 kBProgress (1): 2.3/24 kBProgress (1): 3.6/24 kBProgress (1): 5.0/24 kBProgress (1): 6.4/24 kBProgress (1): 7.8/24 kBProgress (1): 9.1/24 kBProgress (1): 10/24 kB Progress (1): 12/24 kBProgress (1): 13/24 kBProgress (1): 15/24 kBProgress (1): 16/24 kBProgress (1): 17/24 kBProgress (1): 19/24 kBProgress (1): 20/24 kBProgress (1): 21/24 kBProgress (1): 23/24 kBProgress (1): 24 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.pom (24 kB at 186.5 kB/s)
+Progress (1): 0.9/16 kBProgress (1): 2.3/16 kBProgress (1): 3.6/16 kBProgress (1): 5.0/16 kBProgress (1): 6.4/16 kBProgress (1): 7.8/16 kBProgress (1): 9.1/16 kBProgress (1): 10/16 kB Progress (1): 11/16 kBProgress (1): 13/16 kBProgress (1): 14/16 kBProgress (1): 16/16 kBProgress (1): 16 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.17.2/jsoup-1.17.2.pom (16 kB at 114.4 kB/s)
+Progress (1): 0.9/17 kBProgress (1): 2.3/17 kBProgress (1): 3.6/17 kBProgress (1): 5.0/17 kBProgress (1): 6.4/17 kBProgress (1): 7.8/17 kBProgress (1): 9.1/17 kBProgress (1): 10/17 kB Progress (1): 11/17 kBProgress (1): 13/17 kBProgress (1): 14/17 kBProgress (1): 15/17 kBProgress (1): 17/17 kBProgress (1): 17 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.pom (17 kB at 109.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-inject/0.9.0.M3/sisu-inject-0.9.0.M3.pom
+Progress (1): 0.9/24 kBProgress (1): 2.3/24 kBProgress (1): 3.6/24 kBProgress (1): 5.0/24 kBProgress (1): 6.4/24 kBProgress (1): 7.8/24 kBProgress (1): 9.1/24 kBProgress (1): 10/24 kB Progress (1): 12/24 kBProgress (1): 13/24 kBProgress (1): 15/24 kBProgress (1): 16/24 kBProgress (1): 17/24 kBProgress (1): 19/24 kBProgress (1): 20/24 kBProgress (1): 21/24 kBProgress (1): 23/24 kBProgress (1): 24 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-inject/0.9.0.M3/sisu-inject-0.9.0.M3.pom (24 kB at 182.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.pom
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom
+Progress (1): 386 B                   Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom (386 B at 2.9 kB/s)
+Progress (1): 0.9/20 kBProgress (1): 2.3/20 kBProgress (1): 3.6/20 kBProgress (1): 5.0/20 kBProgress (1): 6.4/20 kBProgress (1): 7.8/20 kBProgress (1): 9.1/20 kBProgress (1): 10/20 kB Progress (1): 12/20 kBProgress (1): 13/20 kBProgress (1): 15/20 kBProgress (1): 16/20 kBProgress (1): 17/20 kBProgress (1): 19/20 kBProgress (1): 20 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.pom (20 kB at 139.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.13.1/maven-plugin-tools-generators-3.13.1.jar
+Progress (1): 0.9/44 kBProgress (1): 2.3/44 kBProgress (1): 3.6/44 kBProgress (1): 5.0/44 kBProgress (1): 6.4/44 kBProgress (1): 7.3/44 kBProgress (1): 8.7/44 kBProgress (1): 10/44 kB Progress (1): 11/44 kBProgress (1): 13/44 kBProgress (1): 14/44 kBProgress (1): 16/44 kBProgress (1): 17/44 kBProgress (1): 18/44 kBProgress (1): 20/44 kBProgress (1): 21/44 kBProgress (1): 22/44 kBProgress (1): 24/44 kBProgress (1): 25/44 kBProgress (1): 26/44 kBProgress (1): 28/44 kBProgress (1): 29/44 kBProgress (1): 31/44 kBProgress (1): 32/44 kBProgress (1): 33/44 kBProgress (1): 35/44 kBProgress (1): 36/44 kBProgress (1): 37/44 kBProgress (1): 39/44 kBProgress (1): 40/44 kBProgress (1): 42/44 kBProgress (1): 43/44 kBProgress (1): 44 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.13.1/maven-plugin-tools-generators-3.13.1.jar (44 kB at 228.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.3/plexus-interactivity-api-1.3.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.17.2/jsoup-1.17.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar
+Progress (1): 0.9/10 kBProgress (1): 2.3/10 kBProgress (1): 3.6/10 kBProgress (1): 5.0/10 kBProgress (1): 6.4/10 kBProgress (1): 7.7/10 kBProgress (1): 9.1/10 kBProgress (1): 10 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.3/plexus-interactivity-api-1.3.jar (10 kB at 178.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar
+Progress (1): 3.8/434 kBProgress (1): 8.0/434 kBProgress (1): 12/434 kB Progress (1): 15/434 kBProgress (1): 20/434 kBProgress (1): 24/434 kBProgress (1): 28/434 kBProgress (1): 32/434 kBProgress (1): 37/434 kBProgress (1): 41/434 kBProgress (1): 45/434 kBProgress (1): 49/434 kBProgress (1): 54/434 kBProgress (1): 58/434 kBProgress (1): 62/434 kBProgress (1): 65/434 kBProgress (1): 69/434 kBProgress (1): 73/434 kBProgress (2): 73/434 kB | 0.9/446 kBProgress (2): 73/434 kB | 2.3/446 kBProgress (2): 73/434 kB | 3.6/446 kBProgress (2): 73/434 kB | 5.0/446 kBProgress (2): 73/434 kB | 6.4/446 kBProgress (2): 73/434 kB | 7.7/446 kBProgress (2): 73/434 kB | 9.1/446 kBProgress (2): 73/434 kB | 10/446 kB Progress (2): 73/434 kB | 12/446 kBProgress (2): 73/434 kB | 13/446 kBProgress (2): 73/434 kB | 15/446 kBProgress (2): 73/434 kB | 15/446 kBProgress (2): 73/434 kB | 17/446 kBProgress (2): 73/434 kB | 18/446 kBProgress (2): 73/434 kB | 20/446 kBProgress (2): 73/434 kB | 21/446 kBProgress (2): 73/434 kB | 22/446 kBProgress (2): 73/434 kB | 24/446 kBProgress (2): 73/434 kB | 25/446 kBProgress (2): 73/434 kB | 26/446 kBProgress (2): 73/434 kB | 28/446 kBProgress (2): 73/434 kB | 29/446 kBProgress (2): 73/434 kB | 31/446 kBProgress (2): 73/434 kB | 32/446 kBProgress (2): 73/434 kB | 33/446 kBProgress (3): 73/434 kB | 33/446 kB | 0.9/645 kBProgress (3): 73/434 kB | 35/446 kB | 0.9/645 kBProgress (3): 73/434 kB | 35/446 kB | 2.3/645 kBProgress (3): 73/434 kB | 36/446 kB | 2.3/645 kBProgress (3): 73/434 kB | 36/446 kB | 3.6/645 kBProgress (3): 73/434 kB | 36/446 kB | 5.0/645 kBProgress (3): 73/434 kB | 36/446 kB | 6.4/645 kBProgress (3): 73/434 kB | 37/446 kB | 6.4/645 kBProgress (3): 73/434 kB | 39/446 kB | 6.4/645 kBProgress (3): 73/434 kB | 39/446 kB | 7.7/645 kBProgress (3): 73/434 kB | 39/446 kB | 9.1/645 kBProgress (3): 73/434 kB | 39/446 kB | 10/645 kB Progress (3): 73/434 kB | 39/446 kB | 12/645 kBProgress (3): 73/434 kB | 39/446 kB | 13/645 kBProgress (3): 73/434 kB | 39/446 kB | 15/645 kBProgress (3): 73/434 kB | 40/446 kB | 15/645 kBProgress (3): 73/434 kB | 40/446 kB | 16/645 kBProgress (3): 73/434 kB | 41/446 kB | 16/645 kBProgress (3): 73/434 kB | 43/446 kB | 16/645 kBProgress (3): 73/434 kB | 43/446 kB | 17/645 kBProgress (3): 73/434 kB | 44/446 kB | 17/645 kBProgress (3): 73/434 kB | 46/446 kB | 17/645 kBProgress (3): 73/434 kB | 47/446 kB | 17/645 kBProgress (3): 73/434 kB | 48/446 kB | 17/645 kBProgress (3): 73/434 kB | 50/446 kB | 17/645 kBProgress (3): 73/434 kB | 51/446 kB | 17/645 kBProgress (3): 73/434 kB | 52/446 kB | 17/645 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 0.9/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 2.3/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 3.6/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 5.0/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 6.4/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 7.7/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 9.1/216 kBProgress (4): 73/434 kB | 52/446 kB | 17/645 kB | 10/216 kB Progress (4): 73/434 kB | 54/446 kB | 17/645 kB | 10/216 kBProgress (4): 73/434 kB | 54/446 kB | 17/645 kB | 11/216 kBProgress (4): 73/434 kB | 55/446 kB | 17/645 kB | 11/216 kBProgress (4): 73/434 kB | 55/446 kB | 17/645 kB | 13/216 kBProgress (4): 73/434 kB | 55/446 kB | 19/645 kB | 13/216 kBProgress (4): 73/434 kB | 55/446 kB | 20/645 kB | 13/216 kBProgress (4): 73/434 kB | 59/446 kB | 20/645 kB | 13/216 kBProgress (4): 73/434 kB | 59/446 kB | 20/645 kB | 14/216 kBProgress (4): 73/434 kB | 59/446 kB | 21/645 kB | 14/216 kBProgress (4): 73/434 kB | 64/446 kB | 21/645 kB | 14/216 kBProgress (4): 73/434 kB | 64/446 kB | 21/645 kB | 15/216 kBProgress (4): 73/434 kB | 64/446 kB | 23/645 kB | 15/216 kBProgress (4): 73/434 kB | 64/446 kB | 23/645 kB | 17/216 kBProgress (4): 73/434 kB | 64/446 kB | 24/645 kB | 17/216 kBProgress (4): 73/434 kB | 64/446 kB | 24/645 kB | 18/216 kBProgress (4): 73/434 kB | 64/446 kB | 25/645 kB | 18/216 kBProgress (4): 73/434 kB | 64/446 kB | 27/645 kB | 18/216 kBProgress (4): 73/434 kB | 64/446 kB | 27/645 kB | 20/216 kBProgress (4): 73/434 kB | 64/446 kB | 28/645 kB | 20/216 kBProgress (4): 73/434 kB | 64/446 kB | 28/645 kB | 21/216 kBProgress (4): 73/434 kB | 64/446 kB | 30/645 kB | 21/216 kBProgress (4): 73/434 kB | 64/446 kB | 31/645 kB | 21/216 kBProgress (4): 73/434 kB | 64/446 kB | 31/645 kB | 22/216 kBProgress (4): 73/434 kB | 64/446 kB | 32/645 kB | 22/216 kBProgress (4): 73/434 kB | 64/446 kB | 32/645 kB | 24/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 24/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 25/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 26/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 28/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 29/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 31/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 32/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 33/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 35/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 36/216 kBProgress (4): 73/434 kB | 64/446 kB | 34/645 kB | 37/216 kBProgress (4): 73/434 kB | 64/446 kB | 35/645 kB | 37/216 kBProgress (4): 73/434 kB | 64/446 kB | 36/645 kB | 37/216 kBProgress (4): 73/434 kB | 64/446 kB | 38/645 kB | 37/216 kBProgress (4): 73/434 kB | 64/446 kB | 39/645 kB | 37/216 kBProgress (4): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 0.9/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 2.3/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 3.6/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 5.0/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 6.4/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 7.7/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 9.1/30 kBProgress (5): 73/434 kB | 68/446 kB | 39/645 kB | 37/216 kB | 10/30 kB Progress (5): 73/434 kB | 68/446 kB | 39/645 kB | 39/216 kB | 10/30 kBProgress (5): 73/434 kB | 68/446 kB | 41/645 kB | 39/216 kB | 10/30 kBProgress (5): 73/434 kB | 68/446 kB | 41/645 kB | 40/216 kB | 10/30 kBProgress (5): 73/434 kB | 68/446 kB | 41/645 kB | 40/216 kB | 12/30 kBProgress (5): 73/434 kB | 68/446 kB | 42/645 kB | 40/216 kB | 12/30 kBProgress (5): 73/434 kB | 68/446 kB | 42/645 kB | 42/216 kB | 12/30 kBProgress (5): 73/434 kB | 68/446 kB | 42/645 kB | 42/216 kB | 13/30 kBProgress (5): 73/434 kB | 68/446 kB | 43/645 kB | 42/216 kB | 13/30 kBProgress (5): 73/434 kB | 68/446 kB | 43/645 kB | 43/216 kB | 13/30 kBProgress (5): 73/434 kB | 68/446 kB | 45/645 kB | 43/216 kB | 13/30 kBProgress (5): 73/434 kB | 68/446 kB | 45/645 kB | 43/216 kB | 15/30 kBProgress (5): 73/434 kB | 68/446 kB | 45/645 kB | 44/216 kB | 15/30 kBProgress (5): 73/434 kB | 68/446 kB | 46/645 kB | 44/216 kB | 15/30 kBProgress (5): 73/434 kB | 68/446 kB | 46/645 kB | 44/216 kB | 16/30 kBProgress (5): 73/434 kB | 68/446 kB | 46/645 kB | 46/216 kB | 16/30 kBProgress (5): 73/434 kB | 68/446 kB | 46/645 kB | 47/216 kB | 16/30 kBProgress (5): 73/434 kB | 68/446 kB | 47/645 kB | 47/216 kB | 16/30 kBProgress (5): 73/434 kB | 68/446 kB | 47/645 kB | 47/216 kB | 17/30 kBProgress (5): 73/434 kB | 68/446 kB | 47/645 kB | 48/216 kB | 17/30 kBProgress (5): 73/434 kB | 68/446 kB | 49/645 kB | 48/216 kB | 17/30 kBProgress (5): 73/434 kB | 68/446 kB | 49/645 kB | 50/216 kB | 17/30 kBProgress (5): 73/434 kB | 68/446 kB | 49/645 kB | 50/216 kB | 19/30 kBProgress (5): 73/434 kB | 68/446 kB | 49/645 kB | 51/216 kB | 19/30 kBProgress (5): 73/434 kB | 68/446 kB | 49/645 kB | 51/216 kB | 20/30 kBProgress (5): 73/434 kB | 68/446 kB | 50/645 kB | 51/216 kB | 20/30 kBProgress (5): 73/434 kB | 68/446 kB | 50/645 kB | 52/216 kB | 20/30 kBProgress (5): 73/434 kB | 68/446 kB | 51/645 kB | 52/216 kB | 20/30 kBProgress (5): 73/434 kB | 68/446 kB | 51/645 kB | 52/216 kB | 21/30 kBProgress (5): 73/434 kB | 68/446 kB | 51/645 kB | 54/216 kB | 21/30 kBProgress (5): 73/434 kB | 68/446 kB | 51/645 kB | 55/216 kB | 21/30 kBProgress (5): 73/434 kB | 68/446 kB | 51/645 kB | 55/216 kB | 23/30 kBProgress (5): 73/434 kB | 68/446 kB | 53/645 kB | 55/216 kB | 23/30 kBProgress (5): 73/434 kB | 68/446 kB | 53/645 kB | 59/216 kB | 23/30 kBProgress (5): 73/434 kB | 68/446 kB | 53/645 kB | 59/216 kB | 24/30 kBProgress (5): 73/434 kB | 68/446 kB | 54/645 kB | 59/216 kB | 24/30 kBProgress (5): 73/434 kB | 68/446 kB | 54/645 kB | 64/216 kB | 24/30 kBProgress (5): 73/434 kB | 68/446 kB | 54/645 kB | 64/216 kB | 25/30 kBProgress (5): 73/434 kB | 68/446 kB | 56/645 kB | 64/216 kB | 25/30 kBProgress (5): 73/434 kB | 68/446 kB | 56/645 kB | 64/216 kB | 26/30 kBProgress (5): 73/434 kB | 68/446 kB | 56/645 kB | 64/216 kB | 27/30 kBProgress (5): 73/434 kB | 68/446 kB | 60/645 kB | 64/216 kB | 27/30 kBProgress (5): 73/434 kB | 68/446 kB | 60/645 kB | 64/216 kB | 29/30 kBProgress (5): 73/434 kB | 68/446 kB | 60/645 kB | 64/216 kB | 30 kB   Progress (5): 73/434 kB | 68/446 kB | 64/645 kB | 64/216 kB | 30 kBProgress (5): 73/434 kB | 68/446 kB | 64/645 kB | 68/216 kB | 30 kBProgress (5): 73/434 kB | 68/446 kB | 68/645 kB | 68/216 kB | 30 kB                                                                   Downloaded from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar (30 kB at 211.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+Progress (4): 77/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 82/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 86/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 90/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 94/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 98/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 103/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 107/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 111/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 115/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 120/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 124/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 128/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 130/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 134/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 139/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 143/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 147/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 151/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 156/434 kB | 68/446 kB | 68/645 kB | 68/216 kBProgress (4): 156/434 kB | 72/446 kB | 68/645 kB | 68/216 kBProgress (4): 156/434 kB | 76/446 kB | 68/645 kB | 68/216 kBProgress (4): 160/434 kB | 76/446 kB | 68/645 kB | 68/216 kBProgress (4): 160/434 kB | 81/446 kB | 68/645 kB | 68/216 kBProgress (4): 164/434 kB | 81/446 kB | 68/645 kB | 68/216 kBProgress (4): 164/434 kB | 85/446 kB | 68/645 kB | 68/216 kBProgress (4): 164/434 kB | 85/446 kB | 73/645 kB | 68/216 kBProgress (4): 164/434 kB | 89/446 kB | 73/645 kB | 68/216 kBProgress (4): 164/434 kB | 89/446 kB | 77/645 kB | 68/216 kBProgress (4): 164/434 kB | 93/446 kB | 77/645 kB | 68/216 kBProgress (4): 164/434 kB | 93/446 kB | 81/645 kB | 68/216 kBProgress (4): 180/434 kB | 93/446 kB | 81/645 kB | 68/216 kBProgress (4): 180/434 kB | 93/446 kB | 85/645 kB | 68/216 kBProgress (4): 180/434 kB | 93/446 kB | 89/645 kB | 68/216 kBProgress (4): 180/434 kB | 97/446 kB | 89/645 kB | 68/216 kBProgress (4): 180/434 kB | 97/446 kB | 89/645 kB | 72/216 kBProgress (4): 180/434 kB | 102/446 kB | 89/645 kB | 72/216 kBProgress (4): 180/434 kB | 102/446 kB | 89/645 kB | 76/216 kBProgress (4): 180/434 kB | 106/446 kB | 89/645 kB | 76/216 kBProgress (4): 180/434 kB | 110/446 kB | 89/645 kB | 76/216 kBProgress (4): 197/434 kB | 110/446 kB | 89/645 kB | 76/216 kBProgress (4): 197/434 kB | 110/446 kB | 89/645 kB | 81/216 kBProgress (4): 197/434 kB | 110/446 kB | 89/645 kB | 85/216 kBProgress (4): 197/434 kB | 114/446 kB | 89/645 kB | 85/216 kBProgress (4): 197/434 kB | 119/446 kB | 89/645 kB | 85/216 kBProgress (4): 197/434 kB | 123/446 kB | 89/645 kB | 85/216 kBProgress (4): 197/434 kB | 123/446 kB | 89/645 kB | 89/216 kBProgress (4): 197/434 kB | 123/446 kB | 89/645 kB | 93/216 kBProgress (4): 197/434 kB | 127/446 kB | 89/645 kB | 93/216 kBProgress (4): 197/434 kB | 127/446 kB | 94/645 kB | 93/216 kBProgress (4): 197/434 kB | 131/446 kB | 94/645 kB | 93/216 kBProgress (4): 197/434 kB | 131/446 kB | 94/645 kB | 97/216 kBProgress (4): 197/434 kB | 131/446 kB | 94/645 kB | 102/216 kBProgress (4): 197/434 kB | 131/446 kB | 98/645 kB | 102/216 kBProgress (4): 197/434 kB | 136/446 kB | 98/645 kB | 102/216 kBProgress (4): 197/434 kB | 136/446 kB | 98/645 kB | 106/216 kBProgress (4): 197/434 kB | 140/446 kB | 98/645 kB | 106/216 kBProgress (4): 197/434 kB | 140/446 kB | 98/645 kB | 110/216 kBProgress (4): 197/434 kB | 140/446 kB | 102/645 kB | 110/216 kBProgress (4): 197/434 kB | 144/446 kB | 102/645 kB | 110/216 kBProgress (4): 197/434 kB | 147/446 kB | 102/645 kB | 110/216 kBProgress (4): 197/434 kB | 147/446 kB | 102/645 kB | 114/216 kBProgress (4): 197/434 kB | 147/446 kB | 106/645 kB | 114/216 kBProgress (4): 197/434 kB | 151/446 kB | 106/645 kB | 114/216 kBProgress (4): 197/434 kB | 155/446 kB | 106/645 kB | 114/216 kBProgress (4): 197/434 kB | 155/446 kB | 111/645 kB | 114/216 kBProgress (4): 197/434 kB | 155/446 kB | 111/645 kB | 119/216 kBProgress (4): 197/434 kB | 155/446 kB | 111/645 kB | 123/216 kBProgress (4): 197/434 kB | 155/446 kB | 115/645 kB | 123/216 kBProgress (4): 197/434 kB | 159/446 kB | 115/645 kB | 123/216 kBProgress (4): 197/434 kB | 159/446 kB | 119/645 kB | 123/216 kBProgress (4): 197/434 kB | 159/446 kB | 119/645 kB | 127/216 kBProgress (4): 197/434 kB | 163/446 kB | 119/645 kB | 127/216 kBProgress (4): 197/434 kB | 163/446 kB | 123/645 kB | 127/216 kBProgress (4): 197/434 kB | 168/446 kB | 123/645 kB | 127/216 kBProgress (4): 197/434 kB | 168/446 kB | 127/645 kB | 127/216 kBProgress (4): 197/434 kB | 168/446 kB | 127/645 kB | 131/216 kBProgress (4): 197/434 kB | 172/446 kB | 127/645 kB | 131/216 kBProgress (4): 197/434 kB | 172/446 kB | 132/645 kB | 131/216 kBProgress (4): 197/434 kB | 176/446 kB | 132/645 kB | 131/216 kBProgress (4): 197/434 kB | 176/446 kB | 132/645 kB | 136/216 kBProgress (4): 197/434 kB | 176/446 kB | 136/645 kB | 136/216 kBProgress (4): 197/434 kB | 180/446 kB | 136/645 kB | 136/216 kBProgress (4): 197/434 kB | 180/446 kB | 140/645 kB | 136/216 kBProgress (4): 197/434 kB | 180/446 kB | 140/645 kB | 140/216 kBProgress (4): 197/434 kB | 180/446 kB | 140/645 kB | 142/216 kBProgress (4): 197/434 kB | 185/446 kB | 140/645 kB | 142/216 kBProgress (4): 197/434 kB | 185/446 kB | 144/645 kB | 142/216 kBProgress (4): 197/434 kB | 185/446 kB | 144/645 kB | 147/216 kBProgress (4): 213/434 kB | 185/446 kB | 144/645 kB | 147/216 kBProgress (4): 213/434 kB | 189/446 kB | 144/645 kB | 147/216 kBProgress (4): 213/434 kB | 189/446 kB | 149/645 kB | 147/216 kBProgress (4): 213/434 kB | 189/446 kB | 149/645 kB | 151/216 kBProgress (4): 213/434 kB | 189/446 kB | 149/645 kB | 155/216 kBProgress (4): 213/434 kB | 193/446 kB | 149/645 kB | 155/216 kBProgress (4): 213/434 kB | 193/446 kB | 153/645 kB | 155/216 kBProgress (4): 213/434 kB | 193/446 kB | 155/645 kB | 155/216 kBProgress (4): 213/434 kB | 193/446 kB | 155/645 kB | 159/216 kBProgress (4): 213/434 kB | 193/446 kB | 155/645 kB | 164/216 kBProgress (4): 213/434 kB | 193/446 kB | 159/645 kB | 164/216 kBProgress (4): 213/434 kB | 197/446 kB | 159/645 kB | 164/216 kBProgress (4): 213/434 kB | 197/446 kB | 159/645 kB | 168/216 kBProgress (4): 213/434 kB | 197/446 kB | 164/645 kB | 168/216 kBProgress (4): 213/434 kB | 197/446 kB | 164/645 kB | 172/216 kBProgress (4): 213/434 kB | 197/446 kB | 168/645 kB | 172/216 kBProgress (4): 230/434 kB | 197/446 kB | 168/645 kB | 172/216 kBProgress (4): 230/434 kB | 197/446 kB | 172/645 kB | 172/216 kBProgress (4): 230/434 kB | 197/446 kB | 172/645 kB | 176/216 kBProgress (4): 230/434 kB | 197/446 kB | 176/645 kB | 176/216 kBProgress (4): 230/434 kB | 197/446 kB | 176/645 kB | 181/216 kBProgress (4): 230/434 kB | 197/446 kB | 176/645 kB | 185/216 kBProgress (4): 230/434 kB | 197/446 kB | 181/645 kB | 185/216 kBProgress (4): 230/434 kB | 197/446 kB | 185/645 kB | 185/216 kBProgress (4): 246/434 kB | 197/446 kB | 185/645 kB | 185/216 kBProgress (4): 246/434 kB | 197/446 kB | 189/645 kB | 185/216 kBProgress (4): 261/434 kB | 197/446 kB | 189/645 kB | 185/216 kBProgress (4): 261/434 kB | 202/446 kB | 189/645 kB | 185/216 kBProgress (4): 261/434 kB | 206/446 kB | 189/645 kB | 185/216 kBProgress (5): 261/434 kB | 206/446 kB | 189/645 kB | 185/216 kB | 0.9/7.2 kBProgress (5): 261/434 kB | 206/446 kB | 189/645 kB | 185/216 kB | 2.3/7.2 kBProgress (5): 261/434 kB | 206/446 kB | 189/645 kB | 185/216 kB | 3.6/7.2 kBProgress (5): 261/434 kB | 206/446 kB | 189/645 kB | 185/216 kB | 5.0/7.2 kBProgress (5): 261/434 kB | 210/446 kB | 189/645 kB | 185/216 kB | 5.0/7.2 kBProgress (5): 261/434 kB | 210/446 kB | 189/645 kB | 185/216 kB | 6.4/7.2 kBProgress (5): 261/434 kB | 210/446 kB | 189/645 kB | 185/216 kB | 7.2 kB                                                                            Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar (7.2 kB at 29.2 kB/s)
+Progress (4): 261/434 kB | 214/446 kB | 189/645 kB | 185/216 kBProgress (4): 278/434 kB | 214/446 kB | 189/645 kB | 185/216 kBProgress (4): 294/434 kB | 214/446 kB | 189/645 kB | 185/216 kBProgress (4): 294/434 kB | 218/446 kB | 189/645 kB | 185/216 kBProgress (4): 294/434 kB | 223/446 kB | 189/645 kB | 185/216 kBProgress (4): 294/434 kB | 223/446 kB | 193/645 kB | 185/216 kBProgress (4): 294/434 kB | 223/446 kB | 197/645 kB | 185/216 kBProgress (4): 294/434 kB | 223/446 kB | 202/645 kB | 185/216 kBProgress (4): 310/434 kB | 223/446 kB | 202/645 kB | 185/216 kBProgress (4): 310/434 kB | 223/446 kB | 206/645 kB | 185/216 kBProgress (4): 310/434 kB | 223/446 kB | 210/645 kB | 185/216 kBProgress (4): 310/434 kB | 223/446 kB | 210/645 kB | 189/216 kBProgress (4): 310/434 kB | 239/446 kB | 210/645 kB | 189/216 kBProgress (4): 310/434 kB | 239/446 kB | 210/645 kB | 193/216 kBProgress (4): 310/434 kB | 239/446 kB | 210/645 kB | 197/216 kBProgress (4): 310/434 kB | 239/446 kB | 214/645 kB | 197/216 kBProgress (4): 327/434 kB | 239/446 kB | 214/645 kB | 197/216 kBProgress (4): 327/434 kB | 239/446 kB | 214/645 kB | 202/216 kBProgress (4): 327/434 kB | 239/446 kB | 219/645 kB | 202/216 kBProgress (4): 327/434 kB | 239/446 kB | 219/645 kB | 206/216 kBProgress (4): 327/434 kB | 239/446 kB | 223/645 kB | 206/216 kBProgress (4): 327/434 kB | 239/446 kB | 223/645 kB | 210/216 kBProgress (4): 327/434 kB | 239/446 kB | 223/645 kB | 214/216 kBProgress (4): 327/434 kB | 239/446 kB | 223/645 kB | 216 kB                                                               Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.jar (216 kB at 733.1 kB/s)
+Progress (3): 343/434 kB | 239/446 kB | 223/645 kBProgress (3): 360/434 kB | 239/446 kB | 223/645 kBProgress (3): 376/434 kB | 239/446 kB | 223/645 kBProgress (3): 392/434 kB | 239/446 kB | 223/645 kBProgress (3): 392/434 kB | 255/446 kB | 223/645 kBProgress (3): 392/434 kB | 272/446 kB | 223/645 kBProgress (3): 392/434 kB | 278/446 kB | 223/645 kBProgress (3): 392/434 kB | 278/446 kB | 239/645 kBProgress (3): 392/434 kB | 294/446 kB | 239/645 kBProgress (3): 392/434 kB | 294/446 kB | 256/645 kBProgress (3): 409/434 kB | 294/446 kB | 256/645 kBProgress (3): 425/434 kB | 294/446 kB | 256/645 kBProgress (3): 425/434 kB | 310/446 kB | 256/645 kBProgress (3): 425/434 kB | 310/446 kB | 272/645 kBProgress (3): 425/434 kB | 310/446 kB | 286/645 kBProgress (3): 425/434 kB | 310/446 kB | 303/645 kBProgress (3): 425/434 kB | 327/446 kB | 303/645 kBProgress (3): 425/434 kB | 327/446 kB | 319/645 kBProgress (3): 425/434 kB | 327/446 kB | 335/645 kBProgress (3): 425/434 kB | 327/446 kB | 352/645 kBProgress (3): 425/434 kB | 327/446 kB | 368/645 kBProgress (3): 425/434 kB | 327/446 kB | 385/645 kBProgress (3): 425/434 kB | 327/446 kB | 401/645 kBProgress (3): 425/434 kB | 327/446 kB | 417/645 kBProgress (3): 425/434 kB | 327/446 kB | 434/645 kBProgress (3): 425/434 kB | 327/446 kB | 450/645 kBProgress (3): 434 kB | 327/446 kB | 450/645 kB    Progress (3): 434 kB | 327/446 kB | 466/645 kB                                              Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar (434 kB at 1.0 MB/s)
+Progress (2): 327/446 kB | 483/645 kBProgress (2): 343/446 kB | 483/645 kBProgress (2): 343/446 kB | 499/645 kBProgress (2): 360/446 kB | 499/645 kBProgress (2): 376/446 kB | 499/645 kBProgress (2): 376/446 kB | 516/645 kBProgress (2): 392/446 kB | 516/645 kBProgress (2): 409/446 kB | 516/645 kBProgress (2): 425/446 kB | 516/645 kBProgress (2): 441/446 kB | 516/645 kBProgress (2): 446 kB | 516/645 kB                                     Downloaded from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.17.2/jsoup-1.17.2.jar (446 kB at 1.0 MB/s)
+Progress (1): 532/645 kBProgress (1): 548/645 kBProgress (1): 565/645 kBProgress (1): 581/645 kBProgress (1): 598/645 kBProgress (1): 614/645 kBProgress (1): 630/645 kBProgress (1): 645 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.20/xstream-1.4.20.jar (645 kB at 1.2 MB/s)
+[INFO] Effective-POM written to: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/effective-pom-96356144-7209-4d1e-b03f-2570562b2298.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.161 s
+[INFO] Finished at: 2026-05-29T18:09:15+05:30
+[INFO] ------------------------------------------------------------------------
+2026-05-29T12:39:15.175Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/pom.xml
+2026-05-29T12:39:15.176Z [INFO] [MavenBuildTool] Java version found in /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/pom.xml: 17
+2026-05-29T12:39:30.071Z [ERROR] Failed to get GitHub access token to validate CVEs for the given dependencies.
+2026-05-29T12:39:30.072Z [INFO] Processing batch 1/1, size: 4
+2026-05-29T12:39:30.072Z [INFO] Proxy configuration: HTTPS_PROXY=(not set), HTTP_PROXY=(not set), NO_PROXY=(not set), NODE_EXTRA_CA_CERTS=(not set), vscode http.proxy=(not set), hasProxy=false
+2026-05-29T12:39:30.072Z [INFO] No proxy detected, using direct connection.
+2026-05-29T12:39:30.074Z [INFO] listing CVEs from GitHub for dependencies [
+  "mysql:mysql-connector-java:8.0.33",
+  "javax.servlet:javax.servlet-api:4.0.1",
+  "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+  "org.apache.commons:commons-dbcp2:2.9.0"
+]
+2026-05-29T12:39:30.074Z [INFO] GitHub Advisory API affects parameter: ["mysql:mysql-connector-java@8.0.33","javax.servlet:javax.servlet-api@4.0.1","org.hibernate.validator:hibernate-validator@6.2.5.Final","org.apache.commons:commons-dbcp2@2.9.0"]
+2026-05-29T12:39:30.801Z [INFO] Fetched 1 total advisories across all pages
+2026-05-29T12:39:30.801Z [INFO] Advisory IDs returned: CVE-2023-22102
+2026-05-29T12:39:30.802Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-05-29T12:39:30.802Z [INFO] done getting 1 CVEs for 4 dependencies
+2026-05-29T12:39:30.802Z [INFO] calculating patched version by dep...
+2026-05-29T12:39:30.803Z [WARN] CVE-2023-22102/mysql:mysql-connector-java:8.0.33: none/invalid patched version "null".
+2026-05-29T12:39:30.803Z [INFO] finished getting CVEs for dependencies.
+2026-05-29T12:39:30.803Z [INFO] Found 1 dependencies with known CVEs
+2026-05-29T12:39:30.803Z [INFO] No known CVEs that need to be fixed are found for dependencies: mysql:mysql-connector-java:8.0.33,javax.servlet:javax.servlet-api:4.0.1,org.hibernate.validator:hibernate-validator:6.2.5.Final,org.apache.commons:commons-dbcp2:2.9.0
+2026-05-29T12:39:30.803Z [INFO] [Tool.invoke]({result: {
+  "message": "No known CVEs that need to be fixed are found for the given dependencies."
+}}).
+2026-05-29T12:39:30.803Z [INFO] ----------------------invoked appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:46.131Z [INFO] ---------------------prepare appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:46.131Z [INFO] [Tool.prepareInvocation]({name: appmod-validate-cves-for-java, input: {
+  "sessionId": "20260529123845",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "dependencies": [
+    "org.springframework:spring-webmvc:5.3.27",
+    "org.springframework:spring-orm:5.3.27",
+    "org.springframework:spring-tx:5.3.27",
+    "org.hibernate:hibernate-core:5.6.15.Final",
+    "org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE",
+    "mysql:mysql-connector-java:8.0.33",
+    "javax.servlet:javax.servlet-api:4.0.1",
+    "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+    "org.apache.commons:commons-dbcp2:2.9.0"
+  ],
+  "__name__": "appmod-validate-cves-for-java"
+}}).
+2026-05-29T12:39:46.131Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-05-29T12:39:46.131Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Validate CVEs"
+}}).
+2026-05-29T12:39:46.131Z [INFO] ----------------------prepared appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:46.137Z [INFO] ----------------------invoke appmod-validate-cves-for-java----------------------
+2026-05-29T12:39:46.137Z [INFO] [Tool.invoke]({name: appmod-validate-cves-for-java, modelId: auto, input: {
+  "sessionId": "20260529123845",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "dependencies": [
+    "org.springframework:spring-webmvc:5.3.27",
+    "org.springframework:spring-orm:5.3.27",
+    "org.springframework:spring-tx:5.3.27",
+    "org.hibernate:hibernate-core:5.6.15.Final",
+    "org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE",
+    "mysql:mysql-connector-java:8.0.33",
+    "javax.servlet:javax.servlet-api:4.0.1",
+    "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+    "org.apache.commons:commons-dbcp2:2.9.0"
+  ],
+  "__name__": "appmod-validate-cves-for-java"
+}}).
+2026-05-29T12:39:46.137Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T12:39:46.137Z [INFO] Project /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system is a maven project, try to get java version from pom.xml
+2026-05-29T12:39:46.137Z [INFO] Getting CVEs for dependencies: org.springframework:spring-webmvc:5.3.27,org.springframework:spring-orm:5.3.27,org.springframework:spring-tx:5.3.27,org.hibernate:hibernate-core:5.6.15.Final,org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE,mysql:mysql-connector-java:8.0.33,javax.servlet:javax.servlet-api:4.0.1,org.hibernate.validator:hibernate-validator:6.2.5.Final,org.apache.commons:commons-dbcp2:2.9.0
+2026-05-29T12:39:46.137Z [INFO] getting CVEs for dependencies:
+ - org.springframework:spring-webmvc:5.3.27
+  - org.springframework:spring-orm:5.3.27
+  - org.springframework:spring-tx:5.3.27
+  - org.hibernate:hibernate-core:5.6.15.Final
+  - org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE
+  - mysql:mysql-connector-java:8.0.33
+  - javax.servlet:javax.servlet-api:4.0.1
+  - org.hibernate.validator:hibernate-validator:6.2.5.Final
+  - org.apache.commons:commons-dbcp2:2.9.0...
+2026-05-29T12:39:46.137Z [INFO] getting gitHub access token...
+2026-05-29T12:39:46.138Z [INFO] Project java version: 17
+2026-05-29T12:39:46.138Z [INFO] Maven project detected.
+2026-05-29T12:39:46.138Z [INFO] Build tool type: mvn
+2026-05-29T12:39:46.148Z [INFO] JDK: {
+  "name": "java",
+  "path": "/opt/homebrew/Cellar/openjdk@17/17.0.19/libexec/openjdk.jdk/Contents/Home/bin",
+  "version": "17"
+}
+2026-05-29T12:39:46.149Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "/Users/lakshya/Documents/apache-maven/apache-maven-4.0.0-rc-5/bin",
+  "version": "",
+  "source": "M2_HOME,PATH"
+}
+2026-05-29T12:39:46.149Z [INFO] Project config: {
+  "buildTool": {
+    "path": "/Users/lakshya/Documents/apache-maven/apache-maven-4.0.0-rc-5/bin",
+    "name": "mvn",
+    "version": "",
+    "source": "M2_HOME,PATH"
+  },
+  "jdk": {
+    "path": "/opt/homebrew/Cellar/openjdk@17/17.0.19/libexec/openjdk.jdk/Contents/Home/bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "doctor-appointment-system",
+  "dir": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system"
+}
+2026-05-29T12:39:46.149Z [INFO] [Environment] Running command (Java undefined): mvn dependency:tree -B
+[WARNING] Unable to find the root directory. Create a .mvn directory in the root directory or add the root="true" attribute on the root project's model to identify it.
+[INFO] Scanning for projects...
+[INFO] Loaded 22873 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] -----------------< com.dabs:doctor-appointment-system >-----------------
+[INFO] Building doctor-appointment-system 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots-c1d4c55f9308e5ac18a4069bed41dca64d85c515.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to jvnet-nexus-releases-a5d540dd75d8efce5a7e6a5ccab82bab11416135 (https://maven.java.net/content/repositories/releases/): (certificate_expired) PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- dependency:3.11.0:tree (default-cli) @ doctor-appointment-system ---
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] com.dabs:doctor-appointment-system:war:1.0
+[INFO] +- org.springframework:spring-webmvc:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-aop:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-beans:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-context:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.27:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-expression:jar:5.3.27:compile
+[INFO] |  \- org.springframework:spring-web:jar:5.3.27:compile
+[INFO] +- org.springframework:spring-orm:jar:5.3.27:compile
+[INFO] |  \- org.springframework:spring-jdbc:jar:5.3.27:compile
+[INFO] +- org.springframework:spring-tx:jar:5.3.27:compile
+[INFO] +- org.hibernate:hibernate-core:jar:5.6.15.Final:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile
+[INFO] |  +- javax.persistence:javax.persistence-api:jar:2.2:compile
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.12.18:compile
+[INFO] |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.1.1.Final:compile
+[INFO] |  +- org.jboss:jandex:jar:2.4.2.Final:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  +- javax.activation:javax.activation-api:jar:1.2.0:compile
+[INFO] |  +- org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile
+[INFO] |  +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[INFO] |  \- org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile
+[INFO] |     +- org.glassfish.jaxb:txw2:jar:2.3.1:compile
+[INFO] |     +- com.sun.istack:istack-commons-runtime:jar:3.0.7:compile
+[INFO] |     +- org.jvnet.staxex:stax-ex:jar:1.8:compile
+[INFO] |     \- com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:compile
+[INFO] +- com.mysql:mysql-connector-j:jar:8.0.33:compile
+[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.21.9:compile
+[INFO] +- org.thymeleaf:thymeleaf-spring5:jar:3.1.1.RELEASE:compile
+[INFO] |  +- org.thymeleaf:thymeleaf:jar:3.1.1.RELEASE:compile
+[INFO] |  |  +- org.attoparser:attoparser:jar:2.0.6.RELEASE:compile
+[INFO] |  |  \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:2.0.5:compile
+[INFO] +- javax.servlet:javax.servlet-api:jar:4.0.1:provided
+[INFO] +- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
+[INFO] |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] \- org.apache.commons:commons-dbcp2:jar:2.9.0:compile
+[INFO]    +- org.apache.commons:commons-pool2:jar:2.10.0:compile
+[INFO]    \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.086 s
+[INFO] Finished at: 2026-05-29T18:09:47+05:30
+[INFO] ------------------------------------------------------------------------
+2026-05-29T12:39:47.998Z [INFO] [MavenBuildTool] Successfully got dependency tree of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:47.998Z [INFO] [MavenBuildTool] Getting Java version of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system from pom.xml
+2026-05-29T12:39:47.998Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:47.998Z [INFO] [MavenBuildTool] Getting all module coordinates of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:47.998Z [INFO] [MavenBuildTool] Getting effective POMs of /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system
+2026-05-29T12:39:47.998Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-4f01ccd3-d22e-4d10-91f9-5924fdd47f80.log
+[WARNING] Unable to find the root directory. Create a .mvn directory in the root directory or add the root="true" attribute on the root project's model to identify it.
+[INFO] Scanning for projects...
+[INFO] Loaded 22873 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots-c1d4c55f9308e5ac18a4069bed41dca64d85c515.txt)
+[INFO] 
+[INFO] -----------------< com.dabs:doctor-appointment-system >-----------------
+[INFO] Building doctor-appointment-system 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ doctor-appointment-system ---
+[INFO] Effective-POM written to: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/effective-pom-4f01ccd3-d22e-4d10-91f9-5924fdd47f80.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.188 s
+[INFO] Finished at: 2026-05-29T18:09:49+05:30
+[INFO] ------------------------------------------------------------------------
+2026-05-29T12:39:49.856Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/pom.xml
+2026-05-29T12:39:49.856Z [INFO] [MavenBuildTool] Java version found in /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/pom.xml: 17
+2026-05-29T12:39:51.266Z [ERROR] Failed to get GitHub access token to validate CVEs for the given dependencies.
+2026-05-29T12:39:51.266Z [INFO] Processing batch 1/1, size: 9
+2026-05-29T12:39:51.266Z [INFO] Proxy configuration: HTTPS_PROXY=(not set), HTTP_PROXY=(not set), NO_PROXY=(not set), NODE_EXTRA_CA_CERTS=(not set), vscode http.proxy=(not set), hasProxy=false
+2026-05-29T12:39:51.267Z [INFO] No proxy detected, using direct connection.
+2026-05-29T12:39:51.267Z [INFO] listing CVEs from GitHub for dependencies [
+  "org.springframework:spring-webmvc:5.3.27",
+  "org.springframework:spring-orm:5.3.27",
+  "org.springframework:spring-tx:5.3.27",
+  "org.hibernate:hibernate-core:5.6.15.Final",
+  "org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE",
+  "mysql:mysql-connector-java:8.0.33",
+  "javax.servlet:javax.servlet-api:4.0.1",
+  "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+  "org.apache.commons:commons-dbcp2:2.9.0"
+]
+2026-05-29T12:39:51.267Z [INFO] GitHub Advisory API affects parameter: ["org.springframework:spring-webmvc@5.3.27","org.springframework:spring-orm@5.3.27","org.springframework:spring-tx@5.3.27","org.hibernate:hibernate-core@5.6.15.Final","org.thymeleaf:thymeleaf-spring5@3.1.1.RELEASE","mysql:mysql-connector-java@8.0.33","javax.servlet:javax.servlet-api@4.0.1","org.hibernate.validator:hibernate-validator@6.2.5.Final","org.apache.commons:commons-dbcp2@2.9.0"]
+2026-05-29T12:39:52.197Z [INFO] Fetched 9 total advisories across all pages
+2026-05-29T12:39:52.197Z [INFO] Advisory IDs returned: CVE-2023-22102, CVE-2024-38816, CVE-2024-38828, CVE-2024-38819, CVE-2025-41242, CVE-2026-22737, CVE-2026-22735, CVE-2026-22745, CVE-2026-22741
+2026-05-29T12:39:52.198Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-05-29T12:39:52.198Z [INFO] done getting 2 CVEs for 9 dependencies
+2026-05-29T12:39:52.198Z [INFO] calculating patched version by dep...
+2026-05-29T12:39:52.198Z [WARN] CVE-2024-38816/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.198Z [INFO] CVE CVE-2024-38828 for org.springframework:spring-webmvc:5.3.27: patched version 5.3.42
+2026-05-29T12:39:52.198Z [WARN] CVE-2024-38819/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.198Z [WARN] CVE-2025-41242/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.198Z [WARN] CVE-2026-22737/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.198Z [WARN] CVE-2026-22735/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.199Z [WARN] CVE-2026-22745/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.199Z [WARN] CVE-2026-22741/org.springframework:spring-webmvc:5.3.27: none/invalid patched version "null".
+2026-05-29T12:39:52.199Z [WARN] CVE-2023-22102/mysql:mysql-connector-java:8.0.33: none/invalid patched version "null".
+2026-05-29T12:39:52.199Z [INFO] finished getting CVEs for dependencies.
+2026-05-29T12:39:52.199Z [INFO] Found 2 dependencies with known CVEs
+2026-05-29T12:39:52.199Z [INFO] No known CVEs that need to be fixed are found for dependencies: org.springframework:spring-webmvc:5.3.27,org.springframework:spring-orm:5.3.27,org.springframework:spring-tx:5.3.27,org.hibernate:hibernate-core:5.6.15.Final,org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE,mysql:mysql-connector-java:8.0.33,javax.servlet:javax.servlet-api:4.0.1,org.hibernate.validator:hibernate-validator:6.2.5.Final,org.apache.commons:commons-dbcp2:2.9.0
+2026-05-29T12:39:52.199Z [INFO] [Tool.invoke]({result: {
+  "message": "No known CVEs that need to be fixed are found for the given dependencies."
+}}).
+2026-05-29T12:39:52.199Z [INFO] ----------------------invoked appmod-validate-cves-for-java----------------------
+2026-05-29T12:40:11.194Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-05-29T12:40:11.194Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "sessionId": "20260529123845",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "event": "securityPlanReviewed",
+  "status": "succeeded",
+  "phase": "plan",
+  "message": "Plan reviewed by automated agent"
+}}).
+2026-05-29T12:40:11.194Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-05-29T12:40:11.194Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-05-29T12:40:11.194Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-05-29T12:40:11.204Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-05-29T12:40:11.204Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "sessionId": "20260529123845",
+  "projectPath": "/Users/lakshya/Documents/Blackbox ai/doctor-appointment-system",
+  "event": "securityPlanReviewed",
+  "status": "succeeded",
+  "phase": "plan",
+  "message": "Plan reviewed by automated agent"
+}}).
+2026-05-29T12:40:11.204Z [INFO] [Tool.invoke] do invoke.
+2026-05-29T12:40:11.204Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'securityPlanReviewed' reported!\nSession ID: 20260529123845,\nSession Dir: /Users/lakshya/Documents/Blackbox ai/doctor-appointment-system/.github/modernize/java-upgrade/20260529123845"
+}}).
+2026-05-29T12:40:11.205Z [INFO] ----------------------invoked appmod-report-event----------------------

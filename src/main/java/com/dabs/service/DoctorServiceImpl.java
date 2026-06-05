@@ -12,6 +12,7 @@ import com.dabs.model.Doctor;
 import com.dabs.model.Specialization;
 
 @Service
+@Transactional
 public class DoctorServiceImpl implements DoctorService {
 
     @Autowired
@@ -23,14 +24,28 @@ public class DoctorServiceImpl implements DoctorService {
     @Override
     @Transactional
     public Doctor findByUserId(int userId) {
+
+        System.out.println("SERVICE RECEIVED USER ID = " + userId);
+
         return doctorDAO.findByUserId(userId);
     }
+
+    
 
     @Override
     @Transactional
     public List<Doctor> searchDoctors(Integer specId, String name) {
 
         List<Doctor> doctors = doctorDAO.findAll();
+
+            System.out.println("TOTAL DOCTORS FROM DAO = " + doctors.size());
+
+            for (Doctor d : doctors) {
+                System.out.println(
+                    "DoctorId=" + d.getDoctorId() +
+                    ", User=" + (d.getUser() != null ? d.getUser().getName() : "NULL")
+                );
+            }
 
         if (specId != null) {
             doctors.removeIf(d ->
@@ -48,6 +63,19 @@ public class DoctorServiceImpl implements DoctorService {
         }
 
         return doctors;
+    }
+
+    @Override
+    @Transactional
+    public Doctor findById(int doctorId) {
+        return doctorDAO.findById(doctorId);
+    }
+
+
+    @Override
+    @Transactional
+    public void update(Doctor doctor) {
+        doctorDAO.update(doctor);
     }
 
     @Override

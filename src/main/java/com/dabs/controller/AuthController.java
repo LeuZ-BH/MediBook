@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+import com.dabs.dao.SpecializationDAO;
 import com.dabs.model.Doctor;
 import com.dabs.model.User;
 import com.dabs.model.enums.Role;
@@ -24,6 +24,10 @@ public class AuthController {
 
     @Autowired
     private DoctorService doctorService;
+
+    @Autowired
+    private SpecializationDAO specializationDAO;
+
 
     @GetMapping("/")
     public String home() {
@@ -59,6 +63,7 @@ public class AuthController {
         session.setAttribute("userName", user.getName());
         session.setAttribute("role", user.getRole().name());
 
+
         if (user.getRole() == Role.PATIENT) return "redirect:/patient/dashboard";
         if (user.getRole() == Role.DOCTOR) {
             Doctor doc = doctorService.findByUserId(user.getUserId());
@@ -69,8 +74,13 @@ public class AuthController {
     }
 
     @GetMapping("/register")
-    public String registerGet(HttpSession session) {
-        if (session.getAttribute("userId") != null) return "redirect:/patient/dashboard";
+    public String register(Model model) {
+
+        model.addAttribute(
+            "specializations",
+            specializationDAO.findAll()
+        );
+
         return "auth/register";
     }
 
@@ -80,6 +90,17 @@ public class AuthController {
             @RequestParam String email,
             @RequestParam String password,
             @RequestParam(required = false) String phone,
+            @RequestParam String role,
+            @RequestParam(required = false) Integer specId,
+            @RequestParam(required = false) String qualification,
+            @RequestParam(required = false) Integer experienceYears,
+            @RequestParam(required = false) String bio,
+            @RequestParam(required = false) String hospitalName,
+            @RequestParam(required = false) Double consultationFee,
+            @RequestParam(required = false) String addressLine,
+            @RequestParam(required = false) String city,
+            @RequestParam(required = false) String state,
+            @RequestParam(required = false) String country,
             HttpSession session,
             RedirectAttributes ra) {
 
@@ -92,11 +113,29 @@ public class AuthController {
         user.setName(name);
         user.setEmail(email);
         user.setPhone(phone);
-        user.setRole(Role.PATIENT);
-        // password hashing inside service is not done for register here; we store hash directly
+        user.setRole(Role.valueOf(role));
         user.setPasswordHash(com.dabs.util.PasswordUtil.hash(password));
 
-        userService.registerPatient(user);
+        if(Role.DOCTOR.name().equals(role)) {
+
+            userService.registerDoctor(
+                    user,
+                    specId,
+                    qualification,
+                    experienceYears,
+                    bio,
+                    hospitalName,
+                    consultationFee,
+                    addressLine,
+                    city,
+                    state,
+                    country
+            );
+
+        } else {
+
+            userService.registerPatient(user);
+        }
 
         return "redirect:/login";
     }

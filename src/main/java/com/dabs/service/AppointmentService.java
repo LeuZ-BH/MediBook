@@ -18,8 +18,10 @@ public interface AppointmentService {
 
     List<Appointment> allAppointments();
 
+    Appointment findById(int id);
 
-    String bookAppointment(int patientId, int slotId, String reason);
+
+    String bookAppointment(int patientId,int slotId,String reason,Integer patientAge,String patientGender,String bloodGroup,Double weight);
 
     String cancelAppointment(int appointmentId, int requestingUserId);
 
@@ -30,7 +32,6 @@ public interface AppointmentService {
     String cancelAppointmentByDoctor(int appointmentId, int doctorId);
 
     String deleteSlot(int slotId, int doctorId);
-
 
 
     String createSlot(
